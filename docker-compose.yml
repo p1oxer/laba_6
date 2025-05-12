@@ -39,6 +39,7 @@ services:
     volumes:
       - rabbitmq-prometheus_grafana:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
+      - grafana_data:/var/lib/grafana
       - ./grafana/dashboards:/var/lib/grafana/dashboards
     depends_on:
       - tempo
